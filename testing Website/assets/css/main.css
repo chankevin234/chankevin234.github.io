@@ -2253,6 +2253,62 @@ input[type="radio"] + label:before {
   object-position: 25% 75%;
 }
 
+/* Hover */
+.image.fit.thumb:before {
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  background: url("images/overlay.png");
+  border-radius: 0.35em;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  width: 88%;
+}
+
+.image.fit.thumb {
+  text-align: center;
+}
+
+.image.fit.thumb:after {
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 0.35em;
+  border: solid 3px #ffffff80;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 400;
+  left: 34%;
+  line-height: 2.25em;
+  margin: -1.25em 0 0 -3em;
+  opacity: 0;
+  padding: 0 1.5em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 50%;
+  white-space: nowrap;
+  content: "GitHub Repository";
+}
+
+.image.fit.thumb:hover:after {
+  opacity: 1;
+}
+
+.image.fit.thumb:hover:before {
+  background: url("images/overlay.png"), url("images/overlay.png");
+  opacity: 1;
+}
+/* Hover ^ */
+
 .image img {
   border-radius: 5px;
   display: block;
